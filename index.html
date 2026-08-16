@@ -3,13 +3,267 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Figma</title>
-    <link rel="stylesheet" href="style.css">
+    <title>TechNova | Página Inicial</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            color: #17212b;
+            background: #f5f7fb;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: #ffffff;
+            border-bottom: 1px solid #dbe3ee;
+        }
+
+        .container {
+            width: min(1120px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            min-height: 72px;
+        }
+
+        .logo {
+            color: #0f3d57;
+            font-size: 1.35rem;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        nav a {
+            color: #243647;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 10px 14px;
+            border-radius: 6px;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #ffffff;
+            background: #126782;
+        }
+
+        .hero {
+            min-height: calc(100vh - 72px);
+            display: grid;
+            align-items: center;
+            padding: 64px 0;
+            color: #ffffff;
+            background:
+                linear-gradient(90deg, rgba(10, 25, 41, 0.88), rgba(10, 25, 41, 0.52)),
+                url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80") center/cover;
+        }
+
+        .hero-content {
+            max-width: 680px;
+        }
+
+        .hero h1 {
+            margin-bottom: 18px;
+            font-size: clamp(2.4rem, 6vw, 4.8rem);
+            line-height: 1.05;
+        }
+
+        .hero p {
+            max-width: 620px;
+            margin-bottom: 28px;
+            color: #e6edf4;
+            font-size: 1.15rem;
+        }
+
+        .button {
+            display: inline-block;
+            color: #ffffff;
+            background: #2a9d8f;
+            padding: 13px 20px;
+            border-radius: 6px;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background: #21867a;
+        }
+
+        main section {
+            padding: 72px 0;
+        }
+
+        .section-title {
+            max-width: 760px;
+            margin-bottom: 32px;
+        }
+
+        .section-title h2 {
+            color: #0f3d57;
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .about-card {
+            background: #ffffff;
+            border: 1px solid #dbe3ee;
+            border-radius: 8px;
+            padding: 28px;
+        }
+
+        .about-card h3 {
+            color: #126782;
+            margin-bottom: 10px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .stat {
+            background: #e8f4f3;
+            border-radius: 8px;
+            padding: 18px;
+        }
+
+        .stat strong {
+            display: block;
+            color: #0f3d57;
+            font-size: 1.8rem;
+        }
+
+        .image-panel {
+            min-height: 420px;
+            border-radius: 8px;
+            background: url("https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1000&q=80") center/cover;
+            box-shadow: 0 18px 48px rgba(15, 61, 87, 0.18);
+        }
+
+        footer {
+            color: #dce7ee;
+            background: #0f2430;
+            padding: 28px 0;
+            text-align: center;
+        }
+
+        @media (max-width: 760px) {
+            .topbar,
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .topbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 16px 0;
+            }
+
+            nav {
+                justify-content: flex-start;
+            }
+
+            .hero {
+                min-height: auto;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .image-panel {
+                min-height: 280px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <iframe
-        src="https://embed.figma.com/proto/3btv0O8kQoz0fc31OlMW8e/Untitled?node-id=2-5&starting-point-node-id=2%3A5&embed-host=share"
-        allowfullscreen>
-    </iframe>
+    <header>
+        <div class="container topbar">
+            <a class="logo" href="index.html">TechNova</a>
+            <nav aria-label="Menu principal">
+                <a class="active" href="index.html">Início</a>
+                <a href="SERVIÇOS.HTML">Serviços</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>TechNova</h1>
+                <p>Uma empresa de tecnologia focada em criar soluções digitais seguras, eficientes e preparadas para o crescimento dos nossos clientes.</p>
+                <a class="button" href="SERVIÇOS.HTML">Conheça nossos serviços</a>
+            </div>
+        </section>
+
+        <section>
+            <div class="container about-grid">
+                <div>
+                    <div class="section-title">
+                        <h2>Quem somos</h2>
+                        <p>A TechNova atua no desenvolvimento de sistemas, sites, automações e consultoria tecnológica para empresas que desejam modernizar processos e melhorar sua presença digital.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <h3>Tecnologia com propósito</h3>
+                        <p>Unimos planejamento, design e desenvolvimento para entregar projetos claros, funcionais e alinhados às necessidades de cada negócio.</p>
+                        <div class="stats">
+                            <div class="stat">
+                                <strong>+50</strong>
+                                <span>projetos entregues</span>
+                            </div>
+                            <div class="stat">
+                                <strong>24h</strong>
+                                <span>monitoramento</span>
+                            </div>
+                            <div class="stat">
+                                <strong>100%</strong>
+                                <span>foco no cliente</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-panel" aria-label="Equipe de tecnologia trabalhando"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 TechNova. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>

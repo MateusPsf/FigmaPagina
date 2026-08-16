@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNova | Serviços</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            min-height: 100vh;
+            color: #17212b;
+            background: #f5f7fb;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: #ffffff;
+            border-bottom: 1px solid #dbe3ee;
+        }
+        .container {
+            width: min(1120px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            min-height: 72px;
+        }
+        .logo {
+            color: #0f3d57;
+            font-size: 1.35rem;
+            font-weight: 800;
+            text-decoration: none;
+        }
+        nav {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+        nav a {
+            color: #243647;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 10px 14px;
+            border-radius: 6px;
+        }
+        nav a:hover,
+        nav a.active {
+            color: #ffffff;
+            background: #126782;
+        }
+        .page-hero {
+            padding: 82px 0;
+            color: #ffffff;
+            background:
+                linear-gradient(90deg, rgba(10, 25, 41, 0.88), rgba(10, 25, 41, 0.45)),
+                url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80") center/cover;
+        }
+        .page-hero h1 {
+            max-width: 780px;
+            margin-bottom: 16px;
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            line-height: 1.08;
+        }
+        .page-hero p {
+            max-width: 650px;
+            color: #e6edf4;
+            font-size: 1.12rem;
+        }
+        main section {
+            padding: 72px 0;
+        }
+        .section-title {
+            max-width: 760px;
+            margin-bottom: 32px;
+        }
+        .section-title h2 {
+            color: #0f3d57;
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+        .service-card {
+            min-height: 260px;
+            background: #ffffff;
+            border: 1px solid #dbe3ee;
+            border-radius: 8px;
+            padding: 26px;
+            box-shadow: 0 12px 30px rgba(15, 61, 87, 0.08);
+        }
+        .service-icon {
+            display: grid;
+            place-items: center;
+            width: 48px;
+            height: 48px;
+            margin-bottom: 18px;
+            color: #ffffff;
+            background: #2a9d8f;
+            border-radius: 8px;
+            font-size: 1.35rem;
+            font-weight: 800;
+        }
+        .service-card h3 {
+            color: #126782;
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+        .contact-band {
+            color: #ffffff;
+            background: #0f2430;
+        }
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 24px;
+            align-items: center;
+        }
+        .contact-content h2 {
+            margin-bottom: 8px;
+            font-size: 2rem;
+        }
+        .button {
+            display: inline-block;
+            color: #ffffff;
+            background: #2a9d8f;
+            padding: 13px 20px;
+            border-radius: 6px;
+            font-weight: 800;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        .button:hover {
+            background: #21867a;
+        }
+        footer {
+            color: #dce7ee;
+            background: #081720;
+            padding: 28px 0;
+            text-align: center;
+        }
+        @media (max-width: 880px) {
+            .services-grid,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            .contact-content {
+                align-items: start;
+            }
+        }
+        @media (max-width: 760px) {
+            .topbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 16px 0;
+            }
+            nav {
+                justify-content: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container topbar">
+            <a class="logo" href="index.html">TechNova</a>
+            <nav aria-label="Menu principal">
+                <a href="index.html">Início</a>
+                <a class="active" href="SERVIÇOS.HTML">Serviços</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Serviços para transformar ideias em soluções digitais</h1>
+                <p>Atendemos empresas que precisam de tecnologia confiável para crescer, automatizar tarefas e oferecer melhores experiências aos seus clientes.</p>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="section-title">
+                    <h2>Principais serviços</h2>
+                    <p>Conheça as áreas em que a TechNova pode apoiar sua empresa.</p>
+                </div>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-icon">01</div>
+                        <h3>Desenvolvimento de sites</h3>
+                        <p>Criação de sites institucionais modernos, responsivos e preparados para apresentar sua marca com profissionalismo.</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">02</div>
+                        <h3>Sistemas personalizados</h3>
+                        <p>Desenvolvimento de plataformas, painéis administrativos e ferramentas sob medida para melhorar processos internos.</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">03</div>
+                        <h3>Consultoria em tecnologia</h3>
+                        <p>Análise de necessidades, planejamento de soluções e orientação para escolhas tecnológicas mais eficientes.</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">04</div>
+                        <h3>Suporte e manutenção</h3>
+                        <p>Acompanhamento técnico, atualizações e correções para manter sistemas e sites funcionando com estabilidade.</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">05</div>
+                        <h3>Automação de processos</h3>
+                        <p>Criação de soluções para reduzir tarefas repetitivas, integrar ferramentas e aumentar a produtividade das equipes.</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">06</div>
+                        <h3>Segurança digital</h3>
+                        <p>Boas práticas, proteção de dados e melhorias para tornar ambientes digitais mais seguros e confiáveis.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="contact-band">
+            <div class="container contact-content">
+                <div>
+                    <h2>Pronto para começar?</h2>
+                    <p>Entre em contato e descubra como a tecnologia pode simplificar a rotina da sua empresa.</p>
+                </div>
+                <a class="button" href="mailto:contato@technova.com">contato@technova.com</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 TechNova. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
